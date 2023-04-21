@@ -6,7 +6,7 @@ var $thumbs = $('.thumb');
 
 function crossfade($img) {
     if ($current) {
-        $scurrent.stop().fadeOut('slow');
+        $current.stop().fadeOut('slow');
     }
     $img.css({
         marginLeft: -$img.width() /2,
@@ -32,7 +32,7 @@ $(document).on('click', '.thumb', function(e){
         $img = $('<img/>');
         cache[src] = {
             $img: $img,
-            isLoaDing: True
+            isLoaDing: true
         };
         //
         $img.on('load', function(){
